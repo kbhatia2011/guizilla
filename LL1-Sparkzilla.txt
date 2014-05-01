@@ -1,0 +1,23 @@
+ <HTMLPAGE> ::= <html><body><HTMLSTUFF>
+
+<HTMLSTUFF> ::= <FORM><HTMLSTUFF>
+	      |<PARAGRAPH><HTMLSTUFF>
+	      |</body></html>EOF
+
+
+<FORM> 	    ::= <form method="post"action="..."><FORMSTUFF>
+
+<FORMSTUFF> ::= <PARAGRAPH><FORMSTUFF>
+	      |<input type="text" name="..."/><FORMSTUFF>
+	      |<Input type="submit" value="submit" /><FORMSTUFF>
+	      |</form>
+
+<PARAGRAPH> ::= <p><PARASTUFF>
+
+<PARASTUFF> ::= <TEXT><PARASTUFF>
+	      |<LINK><PARASTUFF>
+	      |</p>
+
+<LINK>      ::= <a href="..."><TEXT>
+
+<TEXT>      ::= ...text...</a>
